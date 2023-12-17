@@ -23,6 +23,7 @@ package question1;
  *          méthode Test sera précédé d'un appel de setUp(), qui réalise les
  *          engagements, et suivi d'un appel à tearDown(), qui les détruit.
  */
+
 public class FahrenheitCelsiusTest extends junit.framework.TestCase {
 	// Définissez ici les variables d'instance nécessaires à vos engagements;
 	// Vous pouvez également les saisir automatiquement du présentoir
@@ -50,7 +51,7 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase {
 	/**
 	 * Supprime les engagements
 	 * 
-	 * Méthode appelée après chaque appel de méthode de test.
+	 * Mèthode appelée après chaque appel de méthode de test.
 	 */
 	protected void tearDown() // throws java.lang.Exception
 	{
@@ -71,4 +72,9 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase {
 		assertEquals("   54 °F -> 12.2 °C ?", 12.2, question1.FahrenheitCelsius.fahrenheitEnCelsius(54), 0.1);
 	}
 	
+	public void test_supp(){
+	    assertEquals("30°F -> -1.1°C ?", -1.1, question1.FahrenheitCelsius.fahrenheitEnCelsius(30), 0.1);
+	    assertEquals("32°F -> 0°C ?", 0, question1.FahrenheitCelsius.fahrenheitEnCelsius(32), 0.1);
+	    assertEquals("34°F -> 1.1°C ?", 1.1, question1.FahrenheitCelsius.fahrenheitEnCelsius(34), 0.1);
+	   }
 }
